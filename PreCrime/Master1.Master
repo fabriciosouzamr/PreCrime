@@ -1,0 +1,117 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master1.master.cs" Inherits="PreCrime.Master1" %>
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head runat="server">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="Content/animate.css" rel="stylesheet">
+        <!--<link href="Content/Bootstrap v2.3.2.min.css" rel="stylesheet" />-->
+        <link href="Content/Bootstrap v3.3.4.min.css" rel="stylesheet" />
+        <!--<link href="Content/bootstrap-grid.min.css" rel="stylesheet">
+        <link href="Content/bootstrap-reboot.min.css" rel="stylesheet">
+        <link href="Content/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="Content/bootstrap-theme.min.css" rel="stylesheet">-->
+        <link href="Content/docs.css" rel="stylesheet">
+        <link href="Content/google-code-prettify/prettify.css" rel="stylesheet">
+        <link href="Content/ie10-viewport-bug-workaround.css" rel="stylesheet">
+        <link href="Content/pygments-manni.css" rel="stylesheet">
+        <link href="Content/_forms.scss" rel="stylesheet">
+        <!--
+        <script src="Scripts/jquery-3.2.1.min.js"></script> -->
+        <script src="Scripts/bootstrap.min.js"></script> 
+        <script src="Scripts/Util.js"></script> 
+
+        <style>
+          body { padding-top: 10px; padding-left: 10px; padding-right: 10px; }
+        </style>
+
+        <title>Sistema Policiamento Preditivo</title>
+        <asp:ContentPlaceHolder ID="head" runat="server">
+        </asp:ContentPlaceHolder>
+    </head>
+    <body data-spy="scroll" data-target=".bs-docs-sidebar">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Policiamento Preditivo</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><asp:HyperLink ID="mnuInicial" NavigateUrl="~/pagInicial.aspx" runat="server">Início</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="mnuEntrevista" NavigateUrl="~/pagPessoaListagem.aspx" runat="server">Pessoas</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="mnuPesquisa" NavigateUrl="~/pagPessoa.aspx?T=1" runat="server">Entrevistar</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="mnuPesquisas" NavigateUrl="~/pagPesquisa_Listagem.aspx" runat="server">Entrevistas</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="mnuPsicologia" NavigateUrl="~/pagAvaliacaoPiscologiaListagem.aspx" runat="server">Psicologia</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="mnuOcorrencia" NavigateUrl="~/pagPessoa.aspx?T=2" runat="server">Ocorrência</asp:HyperLink></li>
+                        <li><asp:HyperLink ID="mnuOcorrencias" NavigateUrl="~/pagOcorrenciaListagem.aspx" runat="server">Ocorrências</asp:HyperLink></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cadastros<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><asp:HyperLink ID="HyperLink1" NavigateUrl="~/pagCadastroListagem.aspx?C=6" runat="server">Bloqueio de Pesquisa</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink2" NavigateUrl="~/pagCadastroListagem.aspx?C=9" runat="server">Classificação de Ocorrência</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink9" NavigateUrl="~/pagCadastroListagem.aspx?C=3" runat="server">Estado Civil</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink3" NavigateUrl="~/pagCadastroListagem.aspx?C=4" runat="server">Grau de Instrução</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink4" NavigateUrl="~/pagCadastroListagem.aspx?C=7" runat="server">Ocupação</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink8" NavigateUrl="~/pagCadastroListagem.aspx?C=8" runat="server">Origem Ocorrência</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink5" NavigateUrl="~/pagCadastroListagem.aspx?C=2" runat="server">Raça</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink6" NavigateUrl="~/pagCadastroListagem.aspx?C=5" runat="server">Religião</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink7" NavigateUrl="~/pagCadastroListagem.aspx?C=1" runat="server">Sexo</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink10" NavigateUrl="~/pagCadastroListagem.aspx?C=10" runat="server">Status de Acompanhamento</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="HyperLink11" NavigateUrl="~/pagCadastroListagem.aspx?C=11" runat="server">Status de Avaliação Psicológica</asp:HyperLink></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mais Funções<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><asp:HyperLink ID="mnuConfiguracao" NavigateUrl="~/pagInicial.aspx" runat="server">Configuração</asp:HyperLink></li>
+                                <li class="divider">-</li>
+                                <li><asp:HyperLink ID="mnuUsuarios" NavigateUrl="~/pagUsuario.aspx" runat="server">Usuários</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="mnuUsuarios_Cidade" NavigateUrl="~/pagPessoa_Cidade.aspx" runat="server">Usuários x Cidades</asp:HyperLink></li>
+                                <li class="divider">-</li>
+                                <li><asp:HyperLink ID="mnuUF" NavigateUrl="~/pagInicial.aspx" runat="server">U.F. - Unidade Federativa</asp:HyperLink></li>
+                                <li><asp:HyperLink ID="mnuCidade" NavigateUrl="~/pagInicial.aspx" runat="server">Cidades</asp:HyperLink></li>
+                            </ul>
+                        </li>
+                        <li><asp:HyperLink ID="mnuSair" NavigateUrl="~/pagSair.aspx" runat="server">Sair</asp:HyperLink></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="main" class="container-fluid">
+            <asp:ContentPlaceHolder ID="body" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <hr />
+        <footer>
+            <p>&copy; Sistema Policiamento Preditivo</p>
+        </footer>
+    
+        <script type="text/javascript" src="Scripts_js/widgets.js"></script>
+        <script src="Scripts_js/jquery.js"></script>
+        <script src="Scripts_js/google-code-prettify/prettify.js"></script>
+        <script src="Scripts_js/bootstrap-transition.js"></script>
+        <script src="Scripts_js/bootstrap-alert.js"></script>
+        <script src="Scripts_js/bootstrap-modal.js"></script>
+        <script src="Scripts_js/bootstrap-dropdown.js"></script>
+        <script src="Scripts_js/bootstrap-scrollspy.js"></script>
+        <script src="Scripts_js/bootstrap-tab.js"></script>
+        <script src="Scripts_js/bootstrap-tooltip.js"></script>
+        <script src="Scripts_js/bootstrap-popover.js"></script>
+        <script src="Scripts_js/bootstrap-balloon.js"></script>
+        <script src="Scripts_js/bootstrap-button.js"></script>
+        <script src="Scripts_js/bootstrap-collapse.js"></script>
+        <script src="Scripts_js/bootstrap-carousel.js"></script>
+        <script src="Scripts_js/bootstrap-typeahead.js"></script>
+        <script src="Scripts_js/bootstrap-affix.js"></script>
+        <script src="Scripts_js/application.js"></script>
+    </body>
+</html>

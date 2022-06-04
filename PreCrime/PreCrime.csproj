@@ -1,0 +1,360 @@
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BA9BC5B5-CCA6-47B9-99F9-30BFCEA716D2}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PreCrime</RootNamespace>
+    <AssemblyName>PreCrime</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.8.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=6.10.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.10.4\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\animate.css" />
+    <Content Include="Content\Bootstrap v2.3.2.min.css" />
+    <Content Include="Content\Bootstrap v3.3.4.min.css" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-responsive.min.css" />
+    <Content Include="Content\bootstrap.min.login.css" />
+    <Content Include="Content\docs.css" />
+    <Content Include="Content\ie10-viewport-bug-workaround.css" />
+    <Content Include="Content\prettify.css" />
+    <Content Include="Content\pygments-manni.css" />
+    <Content Include="Content\signin.css" />
+    <Content Include="docs\MySqlCommand.xml" />
+    <Content Include="docs\MySqlCommandBuilder.xml" />
+    <Content Include="docs\MySqlConnection.xml" />
+    <Content Include="docs\MySqlConnectionStringBuilder.xml" />
+    <Content Include="docs\MySqlDataAdapter.xml" />
+    <Content Include="docs\MySqlDataReader.xml" />
+    <Content Include="docs\MySqlException.xml" />
+    <Content Include="docs\MySqlHelper.xml" />
+    <Content Include="docs\MySqlParameter.xml" />
+    <Content Include="docs\MySqlParameterCollection.xml" />
+    <Content Include="docs\MySqlTransaction.xml" />
+    <Content Include="img\glyphicons-halflings-white.png" />
+    <Content Include="img\glyphicons-halflings.png" />
+    <Content Include="img\seta-direita-ultima.png" />
+    <Content Include="img\seta-direita.png" />
+    <Content Include="img\seta-esquerda-ultima.png" />
+    <Content Include="img\seta-esquerda.png" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="pagAvaliacaoPiscologia.aspx" />
+    <Content Include="pagAvaliacaoPiscologiaListagem.aspx" />
+    <Content Include="pagOcorrencia.aspx" />
+    <Content Include="pagOcorrenciaListagem.aspx" />
+    <Content Include="pagPesquisasPendentesAvaliacao.aspx" />
+    <Content Include="pagPesquisa_Listagem.aspx" />
+    <Content Include="pagPessoa.aspx" />
+    <Content Include="pagPessoaListagem.aspx" />
+    <Content Include="pagPessoa_Cidade.aspx" />
+    <Content Include="pagPessoa_Pesquisa.aspx" />
+    <Content Include="pagUsuario.aspx" />
+    <Content Include="Scripts\Util.js" />
+    <Content Include="Master1.Master" />
+    <Content Include="Content\_forms.scss" />
+    <None Include="packages.config" />
+    <Content Include="pagCadastro.aspx" />
+    <Content Include="pagCadastroListagem.aspx" />
+    <Content Include="pagInicial.aspx" />
+    <Content Include="pagLogin.aspx" />
+    <Content Include="pagPesquisa.aspx" />
+    <Content Include="pagPesquisas.aspx" />
+    <Content Include="pagSair.aspx" />
+    <Content Include="Scripts\jquery-3.2.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.2.1.min.map" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-3.2.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.2.1.js" />
+    <Content Include="Scripts\jquery-3.2.1.min.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.min.js" />
+    <Content Include="Scripts_js\application.js" />
+    <Content Include="Scripts_js\bootstrap-affix.js" />
+    <Content Include="Scripts_js\bootstrap-alert.js" />
+    <Content Include="Scripts_js\bootstrap-balloon.js" />
+    <Content Include="Scripts_js\bootstrap-button.js" />
+    <Content Include="Scripts_js\bootstrap-carousel.js" />
+    <Content Include="Scripts_js\bootstrap-collapse.js" />
+    <Content Include="Scripts_js\bootstrap-dropdown.js" />
+    <Content Include="Scripts_js\bootstrap-modal.js" />
+    <Content Include="Scripts_js\bootstrap-popover.js" />
+    <Content Include="Scripts_js\bootstrap-scrollspy.js" />
+    <Content Include="Scripts_js\bootstrap-tab.js" />
+    <Content Include="Scripts_js\bootstrap-tooltip.js" />
+    <Content Include="Scripts_js\bootstrap-transition.js" />
+    <Content Include="Scripts_js\bootstrap-typeahead.js" />
+    <Content Include="Scripts_js\jquery.js" />
+    <Content Include="Scripts_js\prettify.js" />
+    <Content Include="Scripts_js\widgets.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Funcoes\clsBancoDados.cs" />
+    <Compile Include="Funcoes\clsDeclaracao.cs" />
+    <Compile Include="Funcoes\clsFuncao.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Master1.Master.cs">
+      <DependentUpon>Master1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master1.Master.designer.cs">
+      <DependentUpon>Master1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="pagAvaliacaoPiscologia.aspx.cs">
+      <DependentUpon>pagAvaliacaoPiscologia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pagAvaliacaoPiscologia.aspx.designer.cs">
+      <DependentUpon>pagAvaliacaoPiscologia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pagAvaliacaoPiscologiaListagem.aspx.cs">
+      <DependentUpon>pagAvaliacaoPiscologiaListagem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pagAvaliacaoPiscologiaListagem.aspx.designer.cs">
+      <DependentUpon>pagAvaliacaoPiscologiaListagem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pagCadastro.aspx.cs">
+      <DependentUpon>pagCadastro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pagCadastro.aspx.designer.cs">
+      <DependentUpon>pagCadastro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pagCadastroListagem.aspx.cs">
+      <DependentUpon>pagCadastroListagem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pagCadastroListagem.aspx.designer.cs">
+      <DependentUpon>pagCadastroListagem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pagInicial.aspx.cs">
+      <DependentUpon>pagInicial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pagInicial.aspx.designer.cs">
+      <DependentUpon>pagInicial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pagLogin.aspx.cs">
+      <DependentUpon>pagLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pagLogin.aspx.designer.cs">
+      <DependentUpon>pagLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pagOcorrencia.aspx.cs">
+      <DependentUpon>pagOcorrencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pagOcorrencia.aspx.designer.cs">
+      <DependentUpon>pagOcorrencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pagOcorrenciaListagem.aspx.cs">
+      <DependentUpon>pagOcorrenciaListagem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pagOcorrenciaListagem.aspx.designer.cs">
+      <DependentUpon>pagOcorrenciaListagem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pagPesquisa.aspx.cs">
+      <DependentUpon>pagPesquisa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pagPesquisa.aspx.designer.cs">
+      <DependentUpon>pagPesquisa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pagPesquisas.aspx.cs">
+      <DependentUpon>pagPesquisas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pagPesquisas.aspx.designer.cs">
+      <DependentUpon>pagPesquisas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pagPesquisasPendentesAvaliacao.aspx.cs">
+      <DependentUpon>pagPesquisasPendentesAvaliacao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pagPesquisasPendentesAvaliacao.aspx.designer.cs">
+      <DependentUpon>pagPesquisasPendentesAvaliacao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pagPesquisa_Listagem.aspx.cs">
+      <DependentUpon>pagPesquisa_Listagem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pagPesquisa_Listagem.aspx.designer.cs">
+      <DependentUpon>pagPesquisa_Listagem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pagPessoa.aspx.cs">
+      <DependentUpon>pagPessoa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pagPessoa.aspx.designer.cs">
+      <DependentUpon>pagPessoa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pagPessoaListagem.aspx.cs">
+      <DependentUpon>pagPessoaListagem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pagPessoaListagem.aspx.designer.cs">
+      <DependentUpon>pagPessoaListagem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pagPessoa_Cidade.aspx.cs">
+      <DependentUpon>pagPessoa_Cidade.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pagPessoa_Cidade.aspx.designer.cs">
+      <DependentUpon>pagPessoa_Cidade.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pagPessoa_Pesquisa.aspx.cs">
+      <DependentUpon>pagPessoa_Pesquisa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pagPessoa_Pesquisa.aspx.designer.cs">
+      <DependentUpon>pagPessoa_Pesquisa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pagSair.aspx.cs">
+      <DependentUpon>pagSair.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pagSair.aspx.designer.cs">
+      <DependentUpon>pagSair.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pagUsuario.aspx.cs">
+      <DependentUpon>pagUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pagUsuario.aspx.designer.cs">
+      <DependentUpon>pagUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1099</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1099/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este projeto faz referência a pacotes do NuGet que não estão presentes neste computador. Use a Restauração de Pacotes do NuGet para baixá-los.  Para obter mais informações, consulte http://go.microsoft.com/fwlink/?LinkID=322105. O arquivo ausente é {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
